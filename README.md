@@ -270,20 +270,3 @@ PS: 不进行打包，直接在服务器上运行 `pnpm start` 也可
 ```shell
 pnpm build
 ```
-
-## 常见问题
-Q: 为什么 `Git` 提交总是报错？
-
-A: 因为有提交信息验证，请遵循 [Commit 指南](./CONTRIBUTING.md)
-
-Q: 如果只使用前端页面，在哪里改请求接口？
-
-A: 根目录下 `.env` 文件中的 `VITE_GLOB_API_URL` 字段。
-
-Q: 文件保存时全部爆红?
-
-A: `vscode` 请安装项目推荐插件，或手动安装 `Eslint` 插件。
-
-Q: 前端没有打字机效果？
-
-A: 一种可能原因是经过 Nginx 反向代理，开启了 buffer，则 Nginx 会尝试从后端缓冲一定大小的数据再发送给浏览器。请尝试在反代参数后添加 `proxy_buffering off;`，然后重载 Nginx。其他 web server 配置同理。
